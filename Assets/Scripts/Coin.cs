@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
     private Score ScoreText;
+    public AudioClip collectSound; 
+
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ScoreText.ScorePlusOne();
+        AudioSource.PlayClipAtPoint(collectSound, transform.position);
         Destroy(gameObject);
     }
 }
