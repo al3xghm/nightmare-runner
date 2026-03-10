@@ -15,14 +15,23 @@ public class Collision : MonoBehaviour
     public float blinkInterval = 0.1f;
     private Renderer[] playerRenderers;
 
+    [Header("Sound Settings")]
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+
     private void Start()
     {
         currentLives = maxLives;
         playerRenderers = GetComponentsInChildren<Renderer>(true);
+        audioSource = GetComponent<AudioSource>();
 
         if (playerRenderers.Length == 0)
         {
             Debug.LogWarning("Aucun Renderer trouvé sur le joueur ou ses enfants !");
+        }
+        if (audioSource == null)
+        {
+            Debug.LogWarning("Pas d'AudioSource sur le Player !");
         }
     }
 
@@ -37,6 +46,11 @@ public class Collision : MonoBehaviour
     private void TakeDamage()
     {
         currentLives--;
+
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
         
         Debug.Log($"Vie perdue ! Vies restantes : {currentLives}/{maxLives}");
 

@@ -48,7 +48,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
@@ -58,7 +58,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
@@ -272,7 +272,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
@@ -1029,6 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a898afb8672de948b2015e3ea1e1801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: 641917845818243afbe2207a786a6279, type: 3}
 --- !u!4 &7361307094742374982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2654836902291847595, guid: aacc89bda3fb47b48bcd5cb162948c23,
@@ -1219,7 +1220,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
@@ -1229,7 +1230,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0be61b8ae904bc38475f86db2f6924,
         type: 3}

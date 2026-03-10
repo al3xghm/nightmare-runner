@@ -1802,6 +1802,7 @@ MonoBehaviour:
   maxLives: 3
   invincibilityDuration: 2
   blinkInterval: 0.1
+  hitSound: {fileID: 8300000, guid: 76e5d51f1fb9946cf8dd370461afae75, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
