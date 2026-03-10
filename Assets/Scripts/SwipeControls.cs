@@ -58,7 +58,7 @@ public class SwipeControls : MonoBehaviour
         }
         
         // Saut (Espace, Z ou Flèche Haut)
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             jump = true;
         }

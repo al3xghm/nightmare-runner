@@ -13,16 +13,16 @@ public class Collision : MonoBehaviour
 
     [Header("Blink Settings")]
     public float blinkInterval = 0.1f;
-    private Renderer playerRenderer;
+    private Renderer[] playerRenderers;
 
     private void Start()
     {
         currentLives = maxLives;
-        playerRenderer = GetComponent<Renderer>();
-        
-        if (playerRenderer == null)
+        playerRenderers = GetComponentsInChildren<Renderer>(true);
+
+        if (playerRenderers.Length == 0)
         {
-            playerRenderer = GetComponentInChildren<Renderer>();
+            Debug.LogWarning("Aucun Renderer trouvé sur le joueur ou ses enfants !");
         }
     }
 
@@ -58,18 +58,18 @@ public class Collision : MonoBehaviour
         
         while (elapsedTime < invincibilityDuration)
         {
-            if (playerRenderer != null)
+            foreach (Renderer r in playerRenderers)
             {
-                playerRenderer.enabled = !playerRenderer.enabled;
+                r.enabled = !r.enabled;
             }
             
             yield return new WaitForSeconds(blinkInterval);
             elapsedTime += blinkInterval;
         }
         
-        if (playerRenderer != null)
+        foreach (Renderer r in playerRenderers)
         {
-            playerRenderer.enabled = true;
+            r.enabled = true;
         }
         
         isInvincible = false;
