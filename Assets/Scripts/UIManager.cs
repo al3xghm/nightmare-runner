@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class UIManager : MonoBehaviour
     public GameObject victoryPanel;
     public GameObject gameOverPanel;
     public AudioSource mainMusic;
+    public GameObject scoreText;    
+    public GameObject healthText;  
 
     private void Awake()
     {
@@ -27,6 +30,8 @@ public class UIManager : MonoBehaviour
     public void ShowVictory()
     {
         if (mainMusic != null) mainMusic.Stop();
+        if (scoreText != null) scoreText.SetActive(false);
+        if (healthText != null) healthText.SetActive(false);
         Time.timeScale = 0;
         if (victoryPanel != null) victoryPanel.SetActive(true);
         Cursor.visible = true;
@@ -36,6 +41,8 @@ public class UIManager : MonoBehaviour
     public void ShowGameOver()
     {
         if (mainMusic != null) mainMusic.Stop();
+        if (scoreText != null) scoreText.SetActive(false);
+        if (healthText != null) healthText.SetActive(false);
         Time.timeScale = 0;
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
         Cursor.visible = true;
