@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject victoryPanel;
     public GameObject gameOverPanel;
+    public AudioSource mainMusic;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowVictory()
     {
+        if (mainMusic != null) mainMusic.Stop();
         Time.timeScale = 0;
         if (victoryPanel != null) victoryPanel.SetActive(true);
         Cursor.visible = true;
@@ -33,6 +35,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
+        if (mainMusic != null) mainMusic.Stop();
         Time.timeScale = 0;
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
         Cursor.visible = true;
